@@ -14,14 +14,15 @@
         <property name="lastname"/>
         
         <set name="events" table="PERSON_EVENT">
-        <key column="PERSON_ID"/>
-        <many-to-many column="EVENT_ID" class="Event"/>
+	        <key column="PERSON_ID"/>
+	        <many-to-many column="EVENT_ID" class="Event"/>
+        </set>
         
         <set name="emailAddresses" table="PERSON_EMAIL_ADDR">
             <key column="PERSON_ID"/>
             <element type="string" column="EMAIL_ADDR"/>
         </set>
-    </set>
+    
     </class>
 
 </hibernate-mapping>
